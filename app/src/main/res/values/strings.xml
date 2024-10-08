@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Santa Login</string>
+    <string name="edt_login">Digite seu login</string>
+    <string name="edt_senha">Digite sua senha</string>
+</resources>
