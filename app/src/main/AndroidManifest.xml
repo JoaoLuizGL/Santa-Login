@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SantaLogin"
         tools:targetApi="31">
         <activity
+            android:name=".view.ListaUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.listaUsuarios"
+            android:exported="false" />
+        <activity
             android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>

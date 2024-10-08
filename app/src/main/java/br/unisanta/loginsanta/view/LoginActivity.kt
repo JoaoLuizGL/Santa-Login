@@ -1,5 +1,6 @@
 package br.unisanta.loginsanta.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -35,6 +36,18 @@ class LoginActivity : AppCompatActivity() {
             val usuario = User(login, senha)
             val msg = viewmodel.cadastrar(usuario)
             Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+        }
+        binding.btnLista.setOnClickListener{
+            val login = binding.edtLogin.text.toString()
+            if (login == "admin"){
+                val intent = Intent(this,ListaUserActivity::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "Acesso negado.", Toast.LENGTH_SHORT).show()
+
+            }
+
         }
     }
 }
